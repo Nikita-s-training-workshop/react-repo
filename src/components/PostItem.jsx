@@ -1,13 +1,13 @@
 import React from 'react'
 
 const PostItem = (props) => {
-  console.log(props)
+
   return (
     <div className="post">
       <div className='post__content'>
-        <strong>1. JavaScript</strong>
+        <strong> {props.post.id}.{props.post.title} </strong>
         <div>
-          JavaScript - язык программирования
+          {props.post.body}
         </div>
       </div>
       

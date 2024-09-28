@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
 const Counter = function () {
-  const [count, setCount] = useState(0)
+  const [clickCount, setClickCount] = useState(0)
   
-  const increment = () => setCount(count + 1)
-  const decrement = () => setCount(count - 1)
+  const increment = () => setClickCount(clickCount + 1)
+  const decrement = () => setClickCount(clickCount - 1)
   
   return (
     <div>
-      <h1>{count}</h1>
+      <h1>{clickCount}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
     </div>

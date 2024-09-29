@@ -5,8 +5,8 @@
 }
 
 #root {
-	display: flex;
 	justify-content: center;
+	display: flex;
 }
 
 .App {
@@ -14,10 +14,14 @@
 }
 
 .post {
-	display: flex;
-	padding: 15px;
-	border: 2px solid teal;
-	margin-top: 15px;
 	justify-content: space-between;
+	display: flex;
+	margin-top: 15px;
+	border: 2px solid teal;
+	padding: 15px;
 	align-items: center;
+}
+
+.postItem {
+	text-align: center;
 }

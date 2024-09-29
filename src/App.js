@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
+import './styles/App.css'
+import {PostList} from './components/PostList'
 
-function App() {
-  const [likes, setLikes] = useState(5)
-  const [inputValue, setInputValue] = useState("Текст в инпуте")
+const INITIAL_STATE = [
+  {id:1, title: 'JavaScript', body:'Description'},
+  {id:2, title: 'JavaScript 2', body:'Description'},
+  {id:3, title: 'JavaScript 3', body:'Description'}
+]
+
+export const App = () => {
   
-  const increment = () => setLikes(likes + 1)
-  const decrement = () => setLikes(likes - 1)
-
+  const [posts, setPosts] = useState(INITIAL_STATE)
+  
   return (
     <div className="App">
-      <h1>{likes}</h1>
-      <h2>{inputValue}</h2>
-      <input
-        type = "text"
-        value={value}
-        onChange={event => setInputValue(event.target.value)}
-      />
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <form>
+        <input type='text' placeholder='Название поста' />
+        <input type='text' placeholder='Описание поста' />
+        <button>Создать пост</button>
+      </form>
+      <PostList posts={posts} title="Список постов 1"/>
     </div>
-  );
+  )
 }
 
-export default App;
